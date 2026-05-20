@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); gh auth login --web --hostname github.com --git-protocol https --scopes \"repo,workflow\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); gh auth status)",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); gh repo create ddphandleidingen/ddphandleidingen.github.io --public --description \"Pradies handleidingen\")",
+      "PowerShell($env:PATH = [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"Machine\"\\) + \";\" + [System.Environment]::GetEnvironmentVariable\\(\"PATH\",\"User\"\\); cd \"C:\\\\Users\\\\Mathias\\\\Desktop\\\\pradies-handleidingen\"; git init; git add .; git commit -m \"Initial commit\"; git branch -M main; git remote add origin https://github.com/ddphandleidingen/ddphandleidingen.github.io.git; git push -u origin main)"
+    ]
+  }
+}

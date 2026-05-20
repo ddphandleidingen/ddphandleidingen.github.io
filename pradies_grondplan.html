@@ -1,0 +1,442 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grondplan Domaine des Pradiès</title>
+<style>
+  body { background: #f0ede6; display: flex; justify-content: center; padding: 30px; font-family: Arial, sans-serif; }
+  .page { background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.15); padding: 10px; }
+  @media print { body { padding: 0; background: white; } .page { box-shadow: none; } }
+
+  .page { overflow-x: auto; }
+  .page svg { max-width: 100%; height: auto; }
+  @media (max-width: 900px) {
+    body { padding: 10px; }
+  }</style>
+</head>
+<body>
+<div class="page">
+<svg width="840" height="1040" viewBox="0 0 840 1040" xmlns="http://www.w3.org/2000/svg">
+  <rect width="840" height="1040" fill="white"/>
+
+  <!-- ===== SCALE NOTE =====
+    Real measurements from plan:
+    Horizontal total house: ~11.54m (5.27 + 1.00 + 5.27 approx)
+    Vertical upper zone: ~5.78m (salle height)
+    We map: 1m ≈ 50px
+    House inner width: ~565px  height upper: ~290px  lower: ~235px
+    Origin (inner top-left): x=100, y=190
+  -->
+
+  <!-- ===== OUTSIDE CONTEXT ===== -->
+  <!-- Parking label -->
+  <text x="90" y="78" font-size="20" fill="#1a4fa8" font-style="italic" font-weight="bold" transform="rotate(-12,90,78)">Parking</text>
+  <!-- Road/chaussée top right -->
+  <line x1="698" y1="35" x2="698" y2="188" stroke="#555" stroke-width="2"/>
+  <line x1="790" y1="35" x2="790" y2="188" stroke="#555" stroke-width="2"/>
+  <line x1="698" y1="35" x2="790" y2="35" stroke="#555" stroke-width="2"/>
+  <text x="796" y="340" font-size="12" fill="#1a4fa8" font-style="italic" transform="rotate(90,796,340)">tête de chaussée</text>
+
+  <!-- ===== WALL THICKNESS = 14px ===== -->
+  <!-- We define the outer shell first as filled rectangles -->
+  <!-- House outer shell: top-left corner at (86,176), inner space starts at (100,190) -->
+  <!-- Outer: x=86, y=176, w=582, h=762 -->
+
+  <!-- TOP OUTER WALL -->
+  <rect x="86" y="176" width="582" height="14" fill="#666"/>
+  <!-- BOTTOM OUTER WALL -->
+  <rect x="86" y="924" width="582" height="14" fill="#666"/>
+  <!-- LEFT OUTER WALL -->
+  <rect x="86" y="176" width="14" height="762" fill="#666"/>
+  <!-- RIGHT OUTER WALL (connects to auvent) -->
+  <rect x="654" y="176" width="14" height="762" fill="#666"/>
+
+  <!-- ===== AUVENT (right extension) =====
+    Auvent starts at x=668 (right of main right wall)
+    Width ~95px, height from y=236 to y=776
+  -->
+  <rect x="668" y="236" width="96" height="540" fill="#e8e8e8" stroke="#555" stroke-width="6"/>
+  <rect x="674" y="242" width="84" height="528" fill="#f3f3f3"/>
+  <!-- Auvent label -->
+  <text x="756" y="520" font-size="15" fill="#444" font-weight="bold" transform="rotate(90,756,520)">Auvent</text>
+  <text x="742" y="520" font-size="13" fill="#444" transform="rotate(90,742,520)">35.69m²</text>
+  <!-- Auvent stair/railing bottom right corner -->
+  <rect x="674" y="580" width="84" height="80" fill="none" stroke="#888" stroke-width="1.5"/>
+  <line x1="674" y1="596" x2="758" y2="596" stroke="#999" stroke-width="1"/>
+  <line x1="674" y1="612" x2="758" y2="612" stroke="#999" stroke-width="1"/>
+  <line x1="674" y1="628" x2="758" y2="628" stroke="#999" stroke-width="1"/>
+  <line x1="674" y1="644" x2="758" y2="644" stroke="#999" stroke-width="1"/>
+
+  <!-- ===== INTERIOR WALLS =====
+    Main horizontal divider at y=490 (separates upper salle/séjour from lower rooms)
+    Full width inner: x=100 to x=654
+  -->
+  <rect x="100" y="490" width="554" height="14" fill="#666"/>
+
+  <!-- Gap in divider between salle/séjour (the "open" zone) -->
+  <!-- Gap at x=292 to x=318 (1m gap = 26px) -->
+  <rect x="292" y="490" width="26" height="14" fill="white"/>
+
+  <!-- Vertical: salle à manger / séjour divider
+       At x=292, from top wall y=190 down to horizontal divider y=490
+  -->
+  <rect x="292" y="190" width="14" height="300" fill="#666"/>
+
+  <!-- Chimney/alcove bump top center - between salle and séjour at top wall
+       Visible as a square recess in the top wall
+  -->
+  <rect x="236" y="176" width="56" height="36" fill="#888" stroke="#555" stroke-width="2"/>
+  <rect x="242" y="182" width="44" height="24" fill="#ccc"/>
+  <!-- Fireplace circle indicator -->
+  <circle cx="264" cy="194" r="9" fill="#bbb" stroke="#777" stroke-width="1.5"/>
+
+  <!-- Vertical: right side of Entrée / left of stairwell
+       At x=220, from y=504 down to y=698 (bottom of entrée)
+  -->
+  <rect x="220" y="504" width="14" height="208" fill="#666"/>
+
+  <!-- Horizontal: bottom of Entrée zone at y=698
+       From left wall x=100 to x=234 (right edge of WC wall)
+  -->
+  <rect x="100" y="698" width="148" height="14" fill="#666"/>
+
+  <!-- WC horizontal divider at y=762
+       From left wall x=100 to x=170
+  -->
+  <rect x="100" y="762" width="84" height="12" fill="#666"/>
+
+  <!-- WC right vertical wall at x=170
+       From y=698 to y=774
+  -->
+  <rect x="170" y="698" width="12" height="76" fill="#666"/>
+
+  <!-- Staircase box walls:
+       Left wall at x=234, right wall at x=316
+       Top at y=504, bottom at y=712
+  -->
+  <rect x="234" y="504" width="14" height="208" fill="#555"/>
+  <rect x="316" y="504" width="14" height="208" fill="#555"/>
+  <rect x="234" y="712" width="96" height="12" fill="#555"/>
+
+  <!-- Vertical: main divider bureau / cuisine
+       At x=330, from horizontal divider y=504 down to bottom wall y=924
+  -->
+  <rect x="330" y="504" width="14" height="420" fill="#666"/>
+
+  <!-- Vertical: right of cuisine / left of auvent passage
+       Already covered by right outer wall at x=654
+  -->
+
+  <!-- Horizontal partition lower right (between stair landing and cuisine right)
+       At y=712 from x=344 to x=488
+  -->
+  <rect x="344" y="712" width="144" height="12" fill="#666"/>
+
+  <!-- Kitchen counter/wall right side
+       Short vertical at x=488 from y=504 to y=724
+  -->
+  <rect x="488" y="504" width="12" height="210" fill="#666"/>
+
+  <!-- ===== WINDOWS =====
+    Each window is a white gap in the wall with thin lines showing glazing
+  -->
+  <!-- TOP WALL WINDOWS -->
+  <!-- Salle à manger: two windows -->
+  <rect x="108" y="176" width="58" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <line x1="137" y1="176" x2="137" y2="190" stroke="#ccc" stroke-width="1"/>
+  <rect x="182" y="176" width="48" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+
+  <!-- Séjour: three windows -->
+  <rect x="362" y="176" width="68" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <line x1="396" y1="176" x2="396" y2="190" stroke="#ccc" stroke-width="1"/>
+  <rect x="456" y="176" width="78" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <line x1="495" y1="176" x2="495" y2="190" stroke="#ccc" stroke-width="1"/>
+  <rect x="564" y="176" width="62" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+
+  <!-- LEFT WALL WINDOWS -->
+  <!-- Salle upper -->
+  <rect x="86" y="218" width="14" height="54" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="86" y="336" width="14" height="54" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <!-- Bureau lower -->
+  <rect x="86" y="572" width="14" height="58" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="86" y="778" width="14" height="58" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="86" y="864" width="14" height="52" fill="white" stroke="#bbb" stroke-width="0.5"/>
+
+  <!-- BOTTOM WALL WINDOWS - cuisine -->
+  <rect x="346" y="924" width="54" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="414" y="924" width="54" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="480" y="924" width="54" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="548" y="924" width="54" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="610" y="924" width="36" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <!-- Bureau bottom -->
+  <rect x="108" y="924" width="70" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+  <rect x="204" y="924" width="56" height="14" fill="white" stroke="#bbb" stroke-width="0.5"/>
+
+  <!-- ===== DOORS =====
+    Each door: gap in wall + swing arc
+    Door gap = opening in wall (white rect)
+    Arc = quarter circle from hinge point
+  -->
+
+  <!-- DOOR 1: Main front door
+    In bottom wall of Entrée at y=698-712
+    Opening from x=158 to x=220 (62px = ~1.2m)
+    Hinges at x=158 (left), swings into Entrée (upward = toward y=504)
+  -->
+  <rect x="158" y="698" width="62" height="14" fill="white"/>
+  <line x1="158" y1="698" x2="158" y2="760" stroke="#444" stroke-width="1.5"/>
+  <path d="M 158 698 A 62 62 0 0 1 220 698" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- DOOR 2: WC door
+    In WC right wall at x=170, opening y=712 to y=752
+    Hinge at y=712 top, swings left into WC (toward x=100)
+  -->
+  <rect x="170" y="712" width="12" height="48" fill="white"/>
+  <line x1="170" y1="712" x2="128" y2="712" stroke="#444" stroke-width="1.5"/>
+  <path d="M 170 712 A 48 48 0 0 0 170 760" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- DOOR 3: Dgt / hall door
+    In right wall of Entrée at x=220-234, around y=590-648
+    Hinge at y=590, swings right into dgt/hall space
+  -->
+  <rect x="220" y="590" width="14" height="58" fill="white"/>
+  <line x1="234" y1="590" x2="234" y2="648" stroke="#444" stroke-width="1.5"/>
+  <path d="M 234 590 A 58 58 0 0 1 292 590" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- DOOR 4: Bureau door
+    In vertical wall at x=330-344, around y=770-828
+    Hinge at y=770, swings left into bureau
+  -->
+  <rect x="330" y="770" width="14" height="58" fill="white"/>
+  <line x1="330" y1="770" x2="330" y2="828" stroke="#444" stroke-width="1.5"/>
+  <path d="M 330 770 A 58 58 0 0 0 272 770" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- DOOR 5: Cuisine to outside/bottom
+    In bottom wall at y=924, opening x=344 to x=402
+    Swings outward (downward)
+  -->
+  <rect x="280" y="924" width="50" height="14" fill="white"/>
+  <line x1="280" y1="924" x2="280" y2="938" stroke="#444" stroke-width="1.5"/>
+  <path d="M 280 924 A 50 50 0 0 0 330 924" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+  <!-- DOOR 6: Séjour to Auvent (upper)
+    In right wall at x=654-668, opening y=240 to y=300
+    Hinge at y=240, swings into séjour (left)
+  -->
+  <rect x="654" y="240" width="14" height="60" fill="white"/>
+  <line x1="654" y1="240" x2="654" y2="300" stroke="#444" stroke-width="1.5"/>
+  <path d="M 654 240 A 60 60 0 0 0 594 240" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- DOOR 7: Séjour to Auvent (middle)
+    Opening y=360 to y=418
+  -->
+  <rect x="654" y="360" width="14" height="58" fill="white"/>
+  <line x1="654" y1="360" x2="654" y2="418" stroke="#444" stroke-width="1.5"/>
+  <path d="M 654 360 A 58 58 0 0 0 596 360" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- DOOR 8: Cuisine to Auvent (lower)
+    Opening y=628 to y=686
+  -->
+  <rect x="654" y="628" width="14" height="58" fill="white"/>
+  <line x1="654" y1="628" x2="654" y2="686" stroke="#444" stroke-width="1.5"/>
+  <path d="M 654 628 A 58 58 0 0 0 596 628" fill="none" stroke="#444" stroke-width="1.5" stroke-dasharray="5,3"/>
+
+  <!-- ===== STAIRCASE =====
+    Box: x=248 to x=316, y=504 to y=712
+    Treads going up (arrow pointing up)
+  -->
+  <rect x="248" y="504" width="68" height="208" fill="#f0f0f0" stroke="#666" stroke-width="1"/>
+  <!-- Stair treads (horizontal lines) -->
+  <line x1="248" y1="520" x2="316" y2="520" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="536" x2="316" y2="536" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="552" x2="316" y2="552" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="568" x2="316" y2="568" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="584" x2="316" y2="584" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="600" x2="316" y2="600" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="616" x2="316" y2="616" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="632" x2="316" y2="632" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="648" x2="316" y2="648" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="664" x2="316" y2="664" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="680" x2="316" y2="680" stroke="#999" stroke-width="1"/>
+  <line x1="248" y1="696" x2="316" y2="696" stroke="#999" stroke-width="1"/>
+  <!-- X diagonals on stair -->
+  <line x1="248" y1="504" x2="316" y2="712" stroke="#bbb" stroke-width="1"/>
+  <line x1="316" y1="504" x2="248" y2="712" stroke="#bbb" stroke-width="1"/>
+  <!-- Up arrow -->
+  <line x1="282" y1="700" x2="282" y2="512" stroke="#1a4fa8" stroke-width="1.5"/>
+  <polygon points="282,505 277,518 287,518" fill="#1a4fa8"/>
+
+  <!-- Blue X pattern on lower landing (stair landing area) -->
+  <rect x="344" y="716" width="144" height="52" fill="#f8f8ff" stroke="#aaa" stroke-width="1"/>
+  <line x1="344" y1="716" x2="488" y2="768" stroke="#1a4fa8" stroke-width="1.3"/>
+  <line x1="488" y1="716" x2="344" y2="768" stroke="#1a4fa8" stroke-width="1.3"/>
+
+  <!-- Blue X tiles bottom of cuisine (terrace/tile pattern) -->
+  <rect x="344" y="886" width="308" height="38" fill="#f8f8ff" stroke="#aaa" stroke-width="0.8"/>
+  <line x1="344" y1="886" x2="394" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="394" y1="886" x2="344" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="394" y1="886" x2="444" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="444" y1="886" x2="394" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="444" y1="886" x2="494" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="494" y1="886" x2="444" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="494" y1="886" x2="544" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="544" y1="886" x2="494" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="544" y1="886" x2="594" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="594" y1="886" x2="544" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="594" y1="886" x2="652" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+  <line x1="652" y1="886" x2="594" y2="924" stroke="#1a4fa8" stroke-width="1.1"/>
+
+  <!-- ===== FURNITURE ===== -->
+
+  <!-- Dining table with curved chairs (dashed) -->
+  <rect x="103" y="228" width="164" height="104" fill="none" stroke="#1a4fa8" stroke-width="2" stroke-dasharray="7,3" rx="3"/>
+  <!-- chairs top (curved arcs) -->
+  <path d="M 108 226 Q 125 210 142 226" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 144 226 Q 161 210 178 226" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 180 226 Q 197 210 214 226" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 216 226 Q 233 210 250 226" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <!-- chairs bottom -->
+  <path d="M 108 334 Q 125 350 142 334" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 144 334 Q 161 350 178 334" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 180 334 Q 197 350 214 334" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+  <path d="M 216 334 Q 233 350 250 334" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="3,2"/>
+
+  <!-- Séjour sofa (blue rectangle with back) -->
+  <rect x="338" y="218" width="116" height="56" fill="none" stroke="#1a4fa8" stroke-width="2" rx="2"/>
+  <rect x="338" y="218" width="116" height="14" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+  <rect x="338" y="218" width="13" height="56" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+  <rect x="441" y="218" width="13" height="56" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+
+  <!-- Séjour armchair -->
+  <rect x="494" y="204" width="62" height="62" fill="none" stroke="#1a4fa8" stroke-width="2" rx="3"/>
+  <rect x="494" y="204" width="62" height="13" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+  <rect x="494" y="204" width="13" height="62" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+  <rect x="543" y="204" width="13" height="62" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+
+  <!-- Coffee table -->
+  <rect x="364" y="320" width="98" height="58" fill="none" stroke="#1a4fa8" stroke-width="1.5" rx="2"/>
+
+  <!-- TV wall bracket -->
+  <rect x="520" y="178" width="50" height="12" fill="#555"/>
+  <text x="523" y="188" font-size="9" fill="white" font-weight="bold">TV</text>
+
+  <!-- Circle (lamp?) in séjour -->
+  <circle cx="476" cy="452" r="14" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+
+  <!-- Small square blocks near right wall (radiators/furniture) -->
+  <rect x="638" y="440" width="16" height="28" fill="#ccc" stroke="#888" stroke-width="1"/>
+
+  <!-- Etoile / coat hooks box near entrée -->
+  <rect x="138" y="494" width="38" height="26" fill="none" stroke="#1a4fa8" stroke-width="1.5"/>
+  <line x1="138" y1="494" x2="176" y2="520" stroke="#1a4fa8" stroke-width="1"/>
+  <line x1="176" y1="494" x2="138" y2="520" stroke="#1a4fa8" stroke-width="1"/>
+  <text x="142" y="491" font-size="7.5" fill="#1a4fa8" font-style="italic">Etoile</text>
+
+  <!-- Toilet in WC -->
+  <ellipse cx="122" cy="730" rx="20" ry="24" fill="white" stroke="#555" stroke-width="1.5"/>
+  <ellipse cx="122" cy="725" rx="12" ry="14" fill="#ebebeb" stroke="#777" stroke-width="1"/>
+  <rect x="102" y="706" width="40" height="13" fill="white" stroke="#555" stroke-width="1.5" rx="2"/>
+
+  <!-- Bureau desk -->
+  <rect x="100" y="808" width="118" height="66" fill="none" stroke="#666" stroke-width="1.5" rx="2"/>
+
+  <!-- Cuisine kitchen island (blue dashed rectangle) -->
+  <rect x="358" y="724" width="108" height="76" fill="none" stroke="#1a4fa8" stroke-width="1.5" stroke-dasharray="5,2" rx="2"/>
+  <!-- Cuisine counter top (right side) -->
+  <rect x="500" y="504" width="14" height="180" fill="#d8d8d8" stroke="#aaa" stroke-width="1"/>
+  <rect x="514" y="504" width="126" height="20" fill="#d8d8d8" stroke="#aaa" stroke-width="1"/>
+  <!-- Sink in counter -->
+  <rect x="584" y="506" width="50" height="32" fill="none" stroke="#1a4fa8" stroke-width="1.5" rx="5"/>
+  <circle cx="609" cy="522" r="7" fill="none" stroke="#1a4fa8" stroke-width="1"/>
+
+  <!-- ===== DIMENSION LINES ===== -->
+  <!-- 5 27 (salle width at mid height) -->
+  <line x1="100" y1="500" x2="292" y2="500" stroke="#333" stroke-width="0.8"/>
+  <line x1="100" y1="497" x2="100" y2="503" stroke="#333" stroke-width="0.8"/>
+  <line x1="292" y1="497" x2="292" y2="503" stroke="#333" stroke-width="0.8"/>
+  <text x="192" y="496" font-size="9" fill="#333" text-anchor="middle">5 27</text>
+
+  <!-- 1 00 gap -->
+  <text x="305" y="496" font-size="9" fill="#333" text-anchor="middle">1 00</text>
+
+  <!-- 4 71 right section -->
+  <line x1="318" y1="500" x2="488" y2="500" stroke="#333" stroke-width="0.8"/>
+  <text x="402" y="496" font-size="9" fill="#333" text-anchor="middle">4 71</text>
+
+  <!-- 5 18 séjour vertical -->
+  <line x1="492" y1="190" x2="492" y2="298" stroke="#333" stroke-width="0.8"/>
+  <text x="495" y="248" font-size="9" fill="#333">5 18</text>
+
+  <!-- .36 small right -->
+  <text x="648" y="510" font-size="8" fill="#333" transform="rotate(90,648,510)">.36</text>
+  <!-- 2 81 -->
+  <text x="648" y="622" font-size="8" fill="#333" transform="rotate(90,648,622)">2 81</text>
+
+  <!-- 10 98 stair span -->
+  <line x1="234" y1="514" x2="488" y2="514" stroke="#333" stroke-width="0.8"/>
+  <text x="360" y="523" font-size="9" fill="#333" text-anchor="middle">10 98</text>
+
+  <!-- Left wall dim 5 78 (salle height) -->
+  <text x="72" y="365" font-size="9" fill="#333" transform="rotate(90,72,365)">5 78</text>
+  <!-- Left wall dim 1 85 (entrée width) -->
+  <text x="72" y="622" font-size="9" fill="#333" transform="rotate(90,72,622)">1 85</text>
+  <!-- Left wall dim 4 96 (bureau height) -->
+  <text x="72" y="826" font-size="9" fill="#333" transform="rotate(90,72,826)">4 96</text>
+
+  <!-- 5 45 bottom bureau -->
+  <line x1="100" y1="932" x2="330" y2="932" stroke="#333" stroke-width="0.8"/>
+  <line x1="100" y1="929" x2="100" y2="935" stroke="#333" stroke-width="0.8"/>
+  <line x1="330" y1="929" x2="330" y2="935" stroke="#333" stroke-width="0.8"/>
+  <text x="213" y="943" font-size="9" fill="#333" text-anchor="middle">5 45</text>
+
+  <!-- 5 47 bottom cuisine -->
+  <line x1="344" y1="932" x2="654" y2="932" stroke="#333" stroke-width="0.8"/>
+  <line x1="344" y1="929" x2="344" y2="935" stroke="#333" stroke-width="0.8"/>
+  <line x1="654" y1="929" x2="654" y2="935" stroke="#333" stroke-width="0.8"/>
+  <text x="498" y="943" font-size="9" fill="#333" text-anchor="middle">5 47</text>
+
+  <!-- 4 96 right of cuisine -->
+  <text x="658" y="736" font-size="8" fill="#333" transform="rotate(90,658,736)">4 96</text>
+
+  <!-- Cuisine internal dims -->
+  <text x="364" y="758" font-size="8" fill="#1a4fa8">4m</text>
+  <text x="364" y="770" font-size="8" fill="#1a4fa8">3 m 5 m</text>
+  <text x="494" y="714" font-size="8" fill="#1a4fa8">1m 20</text>
+  <!-- Table dim salle -->
+  <text x="164" y="418" font-size="9" fill="#333">4m 30</text>
+
+  <!-- open tant lumineux annotation -->
+  <text x="100" y="486" font-size="7.5" fill="#1a4fa8" font-style="italic">open tant lumineux</text>
+
+  <!-- ===== ROOM LABELS ===== -->
+  <text x="108" y="396" font-size="17" fill="#1a4fa8" font-weight="bold" font-style="italic">Salle à manger</text>
+  <text x="336" y="376" font-size="18" fill="#1a4fa8" font-weight="bold" font-style="italic">Séjour</text>
+  <text x="328" y="398" font-size="15" fill="#1a4fa8" font-weight="bold">40.60m²</text>
+  <text x="100" y="548" font-size="12" fill="#222" font-weight="bold">Entrée 1.22m²</text>
+  <text x="100" y="564" font-size="11" fill="#222">11.12m²</text>
+  <text x="96" y="724" font-size="11" fill="#222" font-weight="bold">Wc</text>
+  <text x="96" y="738" font-size="10" fill="#222">1.22m²</text>
+  <text x="158" y="548" font-size="11" fill="#222" font-weight="bold">Dgt</text>
+  <text x="153" y="562" font-size="10" fill="#222">1.22m²</text>
+  <text x="100" y="826" font-size="16" fill="#222" font-weight="bold">Bureau</text>
+  <text x="100" y="848" font-size="15" fill="#222" font-weight="bold">26.20m²</text>
+  <text x="100" y="868" font-size="12" fill="#1a4fa8" font-style="italic">(privé)</text>
+  <text x="380" y="796" font-size="16" fill="#222" font-weight="bold">Cuisine</text>
+  <text x="368" y="816" font-size="15" fill="#222" font-weight="bold">17.22m²</text>
+
+  <!-- ===== NORTH ARROW ===== -->
+  <g transform="translate(760,972)">
+    <circle cx="0" cy="0" r="20" fill="white" stroke="#333" stroke-width="1.5"/>
+    <polygon points="0,-16 5,6 0,0 -5,6" fill="#333"/>
+    <polygon points="0,16 5,-6 0,0 -5,-6" fill="white" stroke="#333" stroke-width="0.8"/>
+    <text x="-4" y="-18" font-size="11" fill="#333" font-weight="bold">N</text>
+  </g>
+
+  <!-- TITLE -->
+  <text x="420" y="1006" font-size="13" fill="#444" text-anchor="middle" font-style="italic">Grondplan gelijkvloers — Domaine des Pradiès</text>
+
+</svg>
+</div>
+</body>
+</html>
